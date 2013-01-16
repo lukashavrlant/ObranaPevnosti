@@ -1,0 +1,1392 @@
+\documentclass[12pt]{article}
+\usepackage[czech]{babel}
+\usepackage[cp1250]{inputenc} 
+\def\hr{\centerline{\rule{300pt}{0.1pt}}}
+\begin{document}
+{\LARGE
+        ObranaPevnosti
+    }
+\begin{itemize}
+
+  \item{\textbf{Typ:} T:ObranaPevnosti.UkladaciDialog\newline
+  \textbf{Popis typu:} 
+            Dialog pro ukládání hry.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.UkladaciDialog.\#ctor\newline
+  \textbf{Popis metody:} 
+            Inicializuje dialog.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.UkladaciDialog.components\newline
+  \textbf{Popis:} 
+            Required designer variable.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.UkladaciDialog.Dispose(System.Boolean)\newline
+  \textbf{Popis metody:} 
+            Clean up any resources being used.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.UkladaciDialog.InitializeComponent\newline
+  \textbf{Popis metody:} 
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.NactiHru\newline
+  \textbf{Popis typu:} 
+            Obsluhuje naèítání hry.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.NactiHru.components\newline
+  \textbf{Popis:} 
+            Required designer variable.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.NactiHru.Dispose(System.Boolean)\newline
+  \textbf{Popis metody:} 
+            Clean up any resources being used.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.NactiHru.InitializeComponent\newline
+  \textbf{Popis metody:} 
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.NactiHru.\#ctor\newline
+  \textbf{Popis metody:} 
+            Inicializuje formuláø pro naètení hry.
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.Hrac\newline
+  \textbf{Popis typu:} 
+            Abstraktní tøída pro definování obecného hráèe. 
+            Dále z této tøídy budou dìdit rùzné typy hráèù, jako napøíklad poèítaèovı èi normální.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Hrac.\#ctor(System.String)\newline
+  \textbf{Popis metody:} 
+            Inicializuje hráèe.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Hrac.VratTah\newline
+  \textbf{Popis metody:} 
+            Obecná metoda hráèe pro vrácení aktuálního tahu.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Hrac.UmelaInteligence\newline
+  \textbf{Popis vlastnosti:} 
+            Indikuje, zda má poèítaè nìjakou umìlou inteligenci, èi zda hráèe øídí uivatel.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Hrac.Jmeno\newline
+  \textbf{Popis vlastnosti:} 
+            Jméno/pøezdívka hráèe.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Hrac.AktualniTah\newline
+  \textbf{Popis vlastnosti:} 
+            Slot pro ukládání aktuálního tahu hráèe.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.AI.ZmenBarvu\newline
+  \textbf{Popis metody:} 
+            Zmìní barvu hráèe na opaènou.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.AI.VratSouradniceObrancu\newline
+  \textbf{Popis metody:} 
+            Náhodnì rozestaví obránce do pevnosti.
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.Rozhodci\newline
+  \textbf{Popis typu:} 
+            Tøída obsahuje algoritmy pro ovìøení, zda danı tah je na dané desce platnı
+            a pro vygenerování všech monıch tahù z dané pozice.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.VratPlatneTahy(System.Int32,System.Int32,ObranaPevnosti.Manazer.StavPole,ObranaPevnosti.HraciDeska)\newline
+  \textbf{Popis metody:} 
+            Vrací všechny platné tahy pro zadanou pozici a pro zadaného hráèe.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.VratPlatneTahy(ObranaPevnosti.Pozice,ObranaPevnosti.Manazer.StavPole,ObranaPevnosti.HraciDeska)\newline
+  \textbf{Popis metody:} 
+            Vrací všechny platné tahy pro zadanou pozici a pro zadaného hráèe.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.VratVsechnyPlatneTahy(ObranaPevnosti.Manazer.StavPole,ObranaPevnosti.HraciDeska)\newline
+  \textbf{Popis metody:} 
+            Vrací všechny platné tahy daného hráèe v tomto kole
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.Serializace(ObranaPevnosti.Skoky)\newline
+  \textbf{Popis metody:} 
+            Serializuje (linearizuje) strom skokù do seznamu (listu).
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.SerializaceSkoku(ObranaPevnosti.Skoky)\newline
+  \textbf{Popis metody:} 
+            Serializuje (linearizuje) jednu vìtev stromu do seznamu (listu).
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.VsechnySkoky(ObranaPevnosti.Pozice,ObranaPevnosti.HraciDeska)\newline
+  \textbf{Popis metody:} 
+            Vrací všechny (i násobné) skoky jednoho obránce.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.HelpSkoky(ObranaPevnosti.Skoky)\newline
+  \textbf{Popis metody:} 
+            Pomocná funkce pro vıpoèet všech skokù jednoho obránce.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.KamMuzeObranceSkocit(ObranaPevnosti.Pozice,ObranaPevnosti.HraciDeska)\newline
+  \textbf{Popis metody:} 
+            Vrací všechny skoky jedné úrovnì jednoho obránce.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.MuzeObranceSkakat(System.Collections.Generic.List{System.Collections.Generic.List{ObranaPevnosti.Tah}})\newline
+  \textbf{Popis metody:} 
+            Zjišuje, jestli se v platnıch tazích vyskytují obráncovy skoky.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.OdstranObycejneTahy(System.Collections.Generic.List{System.Collections.Generic.List{ObranaPevnosti.Tah}})\newline
+  \textbf{Popis metody:} 
+            Odstraní obyèejné tahy, tedy ty, ve kterıch se neskáèe.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.OdstranObycejneTahy(System.Collections.Generic.List{ObranaPevnosti.Tah})\newline
+  \textbf{Popis metody:} 
+            Odstraní obyèejné tahy, tedy ty, ve kterıch se neskáèe.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.ValidniTah(System.Int32,System.Int32,System.Int32,System.Int32,ObranaPevnosti.Manazer.StavPole,ObranaPevnosti.HraciDeska)\newline
+  \textbf{Popis metody:} 
+            Zjistíme, jestli je danı tah validní.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.DoBoku(System.Int32,System.Int32,System.Int32,System.Int32)\newline
+  \textbf{Popis metody:} 
+            Jde kámen do boku?
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.Dopredu(System.Int32,System.Int32,System.Int32,System.Int32,ObranaPevnosti.Manazer.StavPole)\newline
+  \textbf{Popis metody:} 
+            Jde kámen dopøedu/dozadu?
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.Diagonalne(System.Int32,System.Int32,System.Int32,System.Int32,ObranaPevnosti.Manazer.StavPole)\newline
+  \textbf{Popis metody:} 
+            Jde kámen diagonálnì?
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.ZakazanyPohyb(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)\newline
+  \textbf{Popis metody:} 
+            Zjišuje, jestli se obránce nepokouší provést nìjakı specifickı zakázanı tah.
+            Napøíklad pøechod pøes roh hrací desky.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.Skok(System.Int32,System.Int32,System.Int32,System.Int32,ObranaPevnosti.Manazer.StavPole,ObranaPevnosti.HraciDeska)\newline
+  \textbf{Popis metody:} 
+            Skáèe obránce horizontálnì nebo vertikálnì nebo diagonálnì?
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.KdoVyhral(ObranaPevnosti.HraciDeska)\newline
+  \textbf{Popis metody:} 
+            Zjišuje, zda ji nìkdo nevyhrál. Vrací buï hráèe, kterı vyhrál nebo vrací Hraci.mimo.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.ZablokovanyObrance(ObranaPevnosti.HraciDeska)\newline
+  \textbf{Popis metody:} 
+            Zablokovali jsme obránce?
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Rozhodci.ZablokovanyHrac(ObranaPevnosti.Manazer.StavPole,ObranaPevnosti.HraciDeska)\newline
+  \textbf{Popis metody:} 
+            Zablokovali jsme na hrací desce daného hráèe?
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.HlavniOkno\newline
+  \textbf{Popis typu:} 
+            Hlavní formuláø.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.NazevHry\newline
+  \textbf{Popis:} 
+            Název hry
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.components\newline
+  \textbf{Popis:} 
+            Required designer variable.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.Dispose(System.Boolean)\newline
+  \textbf{Popis metody:} 
+            Clean up any resources being used.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.InitializeComponent\newline
+  \textbf{Popis metody:} 
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.ManazerHry\newline
+  \textbf{Popis:} 
+            Odkaz na manaera, øídícího celou hru.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.SeznamPolozekObtiznosti\newline
+  \textbf{Popis:} 
+            Obsahuje seznam menu poloek z èásti Obtínost.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.SeznamPolozekMoznosti\newline
+  \textbf{Popis:} 
+            Obsahuje seznam menu poloek z èásti Monosti
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.Status\newline
+  \textbf{Popis:} 
+            Statusbar -- zobrazuje nìkteré informace o prùbìhu hry
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.PresunKamene\newline
+  \textbf{Popis:} 
+            Indikuje, zda jsme ji vybrali hrací kámen a provádíme s ním tah
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.NactenePozice\newline
+  \textbf{Popis:} 
+            Obsahuje seznam naètenıch pozic, z kterého je pak vytvoøen tah hráèe.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.MouseHoverPozice\newline
+  \textbf{Popis:} 
+            Uchovává si pozici políèka, pøes které pøejídí myš
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.AktivniPozice\newline
+  \textbf{Popis:} 
+            Uchovává si pozici kamene, se kterım chceme táhnout.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.VicenasobnySkok\newline
+  \textbf{Popis:} 
+            Provádíme vícenásobnı skok?
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.PrubehHry\newline
+  \textbf{Popis:} 
+            Timer, kterı slouí k pozdìjšímu pøehrání celé hry
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.UpozorneniHry\newline
+  \textbf{Popis:} 
+            Zde uchováváme upozornìní hry jako napøíklad neplatnı tah, konec hry apod.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.PrvniTah\newline
+  \textbf{Popis:} 
+            Slouí jen k tomu, aby se hráø mohl vrátit a na úplnı zaèátek hry
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.PravidlaHry\newline
+  \textbf{Popis:} 
+            Obsahuje referenci na formuláø s pravidly hry.
+            Slouí k tomu, abychom nemohli zobrazit dvì taková okna.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HlavniOkno.OvladaniHry\newline
+  \textbf{Popis:} 
+            Obsahuje referenci na formuláø s popisem ovládání hry.
+            Slouí k tomu, abychom nemohli zobrazit dvì taková okna.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.\#ctor\newline
+  \textbf{Popis metody:} 
+            Nastaví a inicializuje základní vlastnosti formuláøe. Naète obrázky útoèníka a obránce.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.Platno\_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)\newline
+  \textbf{Popis metody:} 
+            Hlavní metoda, která zajišuje dìní poté, co se klikne na hrací desku.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.ProvedTah\newline
+  \textbf{Popis metody:} 
+            Provede tah
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.Platno\_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)\newline
+  \textbf{Popis metody:} 
+            Zvırazní políèko, pøes které zrovna pøejedeme myší.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.VratPoziciNaHraciDesce(System.Int32,System.Int32)\newline
+  \textbf{Popis metody:} 
+            Pøepoèítá souøadnice sejmuté po kliknutí myši na obrazovku na 
+            ekvivalentní souøadnice na hrací desce.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.KliknutoNaPolickoDesky(System.Int32,System.Int32,System.Int32,System.Int32)\newline
+  \textbf{Popis metody:} 
+            Odpovídají souøadnice myši X a Y políèku na hrací desce
+            o souøadnicích i a j?
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.Platno\_Paint(System.Object,System.Windows.Forms.PaintEventArgs)\newline
+  \textbf{Popis metody:} 
+            Vykreslí formuláø.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.VykresliHoverPolicko(System.Drawing.Graphics)\newline
+  \textbf{Popis metody:} 
+            Zvırazní pole, na které jsme najeli myší.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.VykresliAktivniPolicko(System.Drawing.Graphics)\newline
+  \textbf{Popis metody:} 
+            Zvırazní kámen, kterım chceme táhnout
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.VykresliPolickoSkoku(System.Drawing.Graphics,ObranaPevnosti.Pozice)\newline
+  \textbf{Popis metody:} 
+            Zvırazní políèko, pøes které se bude skákat
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.VykresliHraciKameny(System.Drawing.Graphics)\newline
+  \textbf{Popis metody:} 
+            Vykreslí hrací kameny, které jsou na hrací desce.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.VykresliHraciDesku(System.Drawing.Graphics)\newline
+  \textbf{Popis metody:} 
+            Vykreslí samotnou hrací desku (podklad).
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.NastavKamen(System.Drawing.Brush,System.Drawing.Graphics,System.Int32,System.Int32)\newline
+  \textbf{Popis metody:} 
+            Vykreslí jeden hrací kámen
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.VykresliPolicko(System.Drawing.Graphics,System.Int32,System.Int32,ObranaPevnosti.HlavniOkno.Policka)\newline
+  \textbf{Popis metody:} 
+            Vykreslí jedno hrací políèko.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.nováHraToolStripMenuItem\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Spustí novou hru. 
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.TahPocitacu\newline
+  \textbf{Popis metody:} 
+            Spustí hru dvou poèítaèù.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.OznameniKonceHry\newline
+  \textbf{Popis metody:} 
+            Oznámí uivateli konec hry.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.NastavPocatecniInformace\newline
+  \textbf{Popis metody:} 
+            Nastaví poèáteèní informace o hráèích.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.NastavPocatecniInformace(ObranaPevnosti.SeznamVstupnichInformaci)\newline
+  \textbf{Popis metody:} 
+            Nastaví poèáteèní informace o hráèích.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.konecToolStripMenuItem\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Ukonèí hru a zavøe okno.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.snadnáToolStripMenuItem\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Nastaví snadnou obtínost poèítaèe
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.normálníToolStripMenuItem\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Nastaví støednì tìkou / normální obtínost poèítaèe.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.tìkáToolStripMenuItem\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Nastaví tìkou obtínost poèítaèe.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.ResetujObtínosti\newline
+  \textbf{Popis metody:} 
+            Nastaví všechny menu itemy obtínosti na false.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.restartHryToolStripMenuItem\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Restartuje celou hru -- zaène nová hra se stejnımi hráèi.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.uloitHruToolStripMenuItem\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Uloí hru do souboru.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.nahrátHruToolStripMenuItem\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Provede nahrání hry ze souboru, zkontroluje vstupní data a následnì
+            pøepíše starého manaera za nového.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.zpìtToolStripMenuItem\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Odchytí událost kliknutí na tlaèítko zpìt a provede tah zpìt.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.TahZpetNeboVpred(System.Action)\newline
+  \textbf{Popis metody:} 
+            Provede tah zpìt èi vpøed dle pøedané funkce.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.vpøedToolStripMenuItem\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Odchytí událost kliknutí na tlaèítko vpøed a provede tah vpøed.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.PripravaNaZpetVpred\newline
+  \textbf{Popis metody:} 
+            Pøipraví hru na táhnutí zpìt/vpøed. Ukonèí hru poèítaèe.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.ObnovaPoZpetVpredTazich\newline
+  \textbf{Popis metody:} 
+            Obnoví hru poté, co se pokusíme jít zpìt/vpøed. zruší všechny uivatelské
+            vstupy, které pøed hrou zpìt/vpøed mohly nastat a aktualizuje desku a historii.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.nejlepšíTahToolStripMenuItem\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Vypoèítá a následnì zobrazí nejlepší tah pro danı okamik.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.zobrazNejTah(ObranaPevnosti.Tah)\newline
+  \textbf{Popis metody:} 
+            Zobrazí nejlepší tah pro danı okamik.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.PocitaciHraj\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Spouští hru poèítaèe, pokud je zrovna poèítaè na tahu, ale netáhne automaticky.
+            To nastává napøíklad v pøípadì, kdy klikneme na "zpìt" a na tahu je poèítaè.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.AktualizujGUI\newline
+  \textbf{Popis metody:} 
+            Aktualizuje ovládací prvky v GUI. Aktualizuje menu, status
+            a samotnou hrací desku. 
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.AktualizujMenu\newline
+  \textbf{Popis metody:} 
+            Aktualizuje horní menu. Stará se o to, aby byly ty správné poloky menu (ne)zobrazeny
+            ve správné okamiky hry. 
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.NastavStatus\newline
+  \textbf{Popis metody:} 
+            Obstarává zmìny ve status baru. Standardnì zobrazuje poèet ji odehranıch tahù 
+            a maximální poèet tahù a také informaci o tom, kdo je na øadì. 
+            Ve vıjimeènıch pøípadech zobrazuje chybové hlášky jako napøíklad
+            neplatnı tah èi konec hry.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.AktualizujPanelHistorie\newline
+  \textbf{Popis metody:} 
+            Metoda starající se o aktualizaci panelu historie. Je volána po kadé moné zmìnì
+            panelu historie. Metoda bere tahy ze zásobníkù zpìtnıch a dopøednıch tahù 
+            a skládá z nich celou posloupnost hry. 
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.prohoïHráèeToolStripMenuItem\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Prohodí hráèe. Z obránce se stane útoèník a z útoèníka obránce.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.Historie\_SelectedIndexChanged(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Obsluná metoda, která se stará o panel historie. Pokud je vybrán jinı
+            tah ne zrovna aktuální, provede patøièné kroky zpìt/vpøed ve høe. 
+            Reaguje na jakoukoliv zmìnu selectedIndexu, take je to citlivé 
+            jak na myš, tak na vıbìr pomocí klávesnice.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.pøehrátToolStripMenuItem\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Zaène pøehrávat od zaèátku celou hru.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.NastavAPrehrajHru\newline
+  \textbf{Popis metody:} 
+            Pøipraví celou hru na to, e se bude pøehrávat poslední partie
+            a následnì ji pøehraje. 
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.UkonciPrehravani\newline
+  \textbf{Popis metody:} 
+            Ukonèí pøehrávání celé hry, pokud je pøehrávání aktivní.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.PrubehHry\_Tick(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Metoda, která je volaná ve smyèce pøi pøehrávání celé partie.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.Pausa\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Pokud je aktivní pøehrávání partie, tak tato metoda pozastavuje
+            a opìt rozebíhá pøehrávání.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.Form\_Closing(System.Object,System.Windows.Forms.FormClosingEventArgs)\newline
+  \textbf{Popis metody:} 
+            Pøi zavírání hlavního okna ukonèíme všechna pøípadná vedlejší vlákna,
+            která ve høe mohou bıt.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.UkonciTahPocitacu\newline
+  \textbf{Popis metody:} 
+            Ukonèí tah dvou poèítaèù, pokud zrovna probíhá. 
+            jinak neudìlá nic.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.nastaveníhráèùToolStripMenuItem\_Click(System.Object,System.EventArgs)\newline
+  \textbf{Popis metody:} 
+            Vyvolá nabídku na zmìnu informací o hráèích.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HlavniOkno.PrenastavHrace\newline
+  \textbf{Popis metody:} 
+            Vyvolá nabídku na zmìnu informací o hráèích a následnì pøenastaví
+            informace na novì zadané. Uivatel si tak mùe v prùbìhu hry pøenastavovat
+            jméno èi typ protihráèe.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.HlavniOkno.PrehravameHru\newline
+  \textbf{Popis vlastnosti:} 
+            Nachází se hra zrovna ve fázi pøehrávání? 
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.HlavniOkno.SetVoidCallback\newline
+  \textbf{Popis typu:} 
+            Callback pouitı pøi invoke formuláøovıch prvkù
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.HlavniOkno.Policka\newline
+  \textbf{Popis typu:} 
+            Vıèet typù rùzného zobrazení políèka.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Program.Main\newline
+  \textbf{Popis metody:} 
+            The main entry point for the application.
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.SeznamVstupnichInformaci\newline
+  \textbf{Popis typu:} 
+            Struktura obsahující informace o hráèích ve høe.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.SeznamVstupnichInformaci.JmenoUtocnika\newline
+  \textbf{Popis vlastnosti:} 
+            Jméno útoèníka ve høe.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.SeznamVstupnichInformaci.JmenoObrance\newline
+  \textbf{Popis vlastnosti:} 
+            Jméno obránce ve høe.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.SeznamVstupnichInformaci.JeUtocnikPocitacovyHrac\newline
+  \textbf{Popis vlastnosti:} 
+            Je útoèník poèítaèovı hráè?
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.SeznamVstupnichInformaci.JeObrancePocitacovyHrac\newline
+  \textbf{Popis vlastnosti:} 
+            Je obránce poèítaèovı hráè?
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.VstupniInformace\newline
+  \textbf{Popis typu:} 
+            Okno pro zvolení informací o hráèích.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.VstupniInformace.components\newline
+  \textbf{Popis:} 
+            Required designer variable.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.VstupniInformace.Dispose(System.Boolean)\newline
+  \textbf{Popis metody:} 
+            Clean up any resources being used.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.VstupniInformace.InitializeComponent\newline
+  \textbf{Popis metody:} 
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.VstupniInformace.\#ctor\newline
+  \textbf{Popis metody:} 
+            Inicializuje formuláø pro zadávání informací o hráèích.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.VstupniInformace.NastaveniHracu(ObranaPevnosti.SeznamVstupnichInformaci)\newline
+  \textbf{Popis metody:} 
+            Vyplní formuláøová pole o hráèích podle toho, jaké informace pøedáme v argumentu.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.VstupniInformace.NastavTextTlacitku(System.String)\newline
+  \textbf{Popis metody:} 
+            Nastaví vıchozímu tlaèítku ve formuláøi jinı text.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.VstupniInformace.SVI\newline
+  \textbf{Popis vlastnosti:} 
+            Obsahuje seznam informací o hráèích.
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.Pravidla\newline
+  \textbf{Popis typu:} 
+            Formuláø s pravidly k Obranì pevnosti
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Pravidla.\#ctor(System.String)\newline
+  \textbf{Popis metody:} 
+            Inicializuje formuláø a zobrazí webovou stránku s pravidly.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Pravidla.components\newline
+  \textbf{Popis:} 
+            Required designer variable.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Pravidla.Dispose(System.Boolean)\newline
+  \textbf{Popis metody:} 
+            Clean up any resources being used.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Pravidla.InitializeComponent\newline
+  \textbf{Popis metody:} 
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Pravidla.AkcePoZavreni\newline
+  \textbf{Popis vlastnosti:} 
+            Tato akce se provede po zavøení formuláøe.
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.Ohodnoceni\newline
+  \textbf{Popis typu:} 
+            Statická tøída, která se stará o ohodnocení hrací desky.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Ohodnoceni.Ohodnot(ObranaPevnosti.HraciDeska)\newline
+  \textbf{Popis metody:} 
+            Ohodonotí danou pozici na hrací desce z pohledu útoèníka.
+            Tedy èím více bodù, tím lépe pro útoèníka (a naopak pro obránce).
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.Pozice\newline
+  \textbf{Popis typu:} 
+            Reprezentuje pozici na hrací desce.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Pozice.\#ctor(System.Int32,System.Int32)\newline
+  \textbf{Popis metody:} 
+            Inicializuje novou Pozici a zároveò nastaví øádek a sloupec dle pøedanıch argumentù.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Pozice.Radek\newline
+  \textbf{Popis:} 
+            Index øádku
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Pozice.Sloupec\newline
+  \textbf{Popis:} 
+            Index sloupce
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Pozice.Equals(System.Object)\newline
+  \textbf{Popis metody:} 
+            Porovnává Pozice podle toho, jestli mají stejnı øádek a zároveò sloupec.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Pozice.Clone\newline
+  \textbf{Popis metody:} 
+            Vrací kopii objektu.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Pozice.op\_Equality(ObranaPevnosti.Pozice,ObranaPevnosti.Pozice)\newline
+  \textbf{Popis metody:} 
+            Porovnává dva objekty podle toho, zda mají stejnı øádek a sloupec.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Pozice.op\_Inequality(ObranaPevnosti.Pozice,ObranaPevnosti.Pozice)\newline
+  \textbf{Popis metody:} 
+            Porovnává dva objekty podle toho, zda mají stejnı øádek a sloupec.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Pozice.GetHashCode\newline
+  \textbf{Popis metody:} 
+            Vrací hash.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Pozice.ToString\newline
+  \textbf{Popis metody:} 
+            Vrací textovou reprezentaci Pozice.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Pozice.Stred(ObranaPevnosti.Pozice,ObranaPevnosti.Pozice)\newline
+  \textbf{Popis metody:} 
+            Vypoèítá Pozici, která leí mezi dvìma jinımi pozicemi. 
+            Metoda se pouívá napøíklad u skokù.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Pozice.StringNaSouradnice(System.String)\newline
+  \textbf{Popis metody:} 
+            Statická funkce pøevádìjící stringové souøadnice do objektu Pozice
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.Minimax\newline
+  \textbf{Popis typu:} 
+            Statická tøída starající se o generování tahù do urèité hloubky.
+            Hloubka je reprezentována obtíností poèítaèe.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Minimax.NejlepsiTah(ObranaPevnosti.HraciDeska,ObranaPevnosti.Manazer.StavPole,System.Int32)\newline
+  \textbf{Popis metody:} 
+            Vygeneruje nejlepší tah pro danou pozici a pro daného hráèe.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Minimax.GenerujVsechnyTahy(ObranaPevnosti.HraciDeska,ObranaPevnosti.Manazer.StavPole,System.Int32,System.Boolean)\newline
+  \textbf{Popis metody:} 
+            Vygeneruje všechny moné situace hry do zadané hloubky a následnì do
+            slotu "vyslednyTah" uloí nejlepší pozici.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Minimax.vyslednyTah\newline
+  \textbf{Popis vlastnosti:} 
+            Vıslednı tah, kterı Minimax vyhodnotil jako nejlepší.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Minimax.AkcePoNalezeniTahu\newline
+  \textbf{Popis vlastnosti:} 
+            Akce, která se má provést ve chvíli, kdy Minimax dokonèí generování tahù.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Minimax.vlakno\newline
+  \textbf{Popis vlastnosti:} 
+            Vlákno, ve kterém jsou generovány tahy.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Minimax.HracNaTahu\newline
+  \textbf{Popis vlastnosti:} 
+            Pro jakého hráèe generujeme tah?
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.Manazer\newline
+  \textbf{Popis typu:} 
+            Manaer hry se stará o celou hru. Umoòuje tahat, vracet hru zpìt/vpøed apod.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.AktualizaceUI\newline
+  \textbf{Popis:} 
+            Akce pro aktualizaci rozhraní po tahu
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.AktualizaceHistorie\newline
+  \textbf{Popis:} 
+            Akce pro aktualizaci historie
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.AkcePoKonciHry\newline
+  \textbf{Popis:} 
+            Akce, která se zavolá po ukonèení hry
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.Sokove\newline
+  \textbf{Popis:} 
+            Pole obsahující dva hráèe -- útoèníka a obránce
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.PosledniTahy\newline
+  \textbf{Popis:} 
+            Fronta uchovávající si poslední stavy hry, abychom pøi ohodnocování
+            mohli znevıhodnit ty tahy, které se opakují.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.HracNaTahu\newline
+  \textbf{Popis:} 
+            Kterı hráè je zrovna na tahu?
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.\#ctor\newline
+  \textbf{Popis metody:} 
+            Inicializuje manaera.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.TahZpet\newline
+  \textbf{Popis metody:} 
+            Vrátí hru o jeden tah zpìt.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.TahVpred\newline
+  \textbf{Popis metody:} 
+            Vrátí hru o jeden tah vpøed.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.PrehodHraceNaTahu\newline
+  \textbf{Popis metody:} 
+            Pøehodí hráèe na tahu.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.PrehodHrace\newline
+  \textbf{Popis metody:} 
+            Metoda pøehazující hráèe ("otoèí hrací desku").
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.VratTahHrace\newline
+  \textbf{Popis metody:} 
+            Vrátí konkrétní tah hráèe, kterı je uloen v patøièném slotu. 
+            Do tohoto slotu je tah uloen buï z konzole nebo ze souboru nebo
+            se o vhodnı tah postará minimax.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.VratHraceNaTahu\newline
+  \textbf{Popis metody:} 
+            Metoda vrací pøímı odkaz na hráèe, kterı je zrovna na tahu.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.Tahni\newline
+  \textbf{Popis metody:} 
+            Provede tah hráèe.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.Tahni(ObranaPevnosti.Tah)\newline
+  \textbf{Popis metody:} 
+            Funkce si od rozhodèího vyádá všechny platné tahy z dané pozici 
+            a pokud se jeden z nich shoduje s pøedanıch tahem, provede tah na desku.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.Tahni(System.String,System.String)\newline
+  \textbf{Popis metody:} 
+            Funkce si od rozhodèího vyádá všechny platné tahy z dané pozici 
+            a pokud se jeden z nich shoduje s pøedanıch tahem, provede tah na desku.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.TahPocitace\newline
+  \textbf{Popis metody:} 
+            Funce pro táhnutí poèítaèe
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.NastavObrance(ObranaPevnosti.Pozice)\newline
+  \textbf{Popis metody:} 
+            Nastaví obránce po jednom.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.Restart\newline
+  \textbf{Popis metody:} 
+            Prostì restartuje hru.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.VychoziNastaveni\newline
+  \textbf{Popis metody:} 
+            Vrátí manaera do vıchozího nastavení
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.NastavObrance\newline
+  \textbf{Popis metody:} 
+            Automaticky nastaví obránce.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.NastavObtiznost(ObranaPevnosti.Manazer.Obtiznost)\newline
+  \textbf{Popis metody:} 
+            Nastaví obtínost poèítaèovım hráèùm
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.NastavObtiznost\newline
+  \textbf{Popis metody:} 
+            Nastaví obtínost poèítaèovım hráèùm z ji uloené obtínosti
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.MuzemeTahnoutVpred\newline
+  \textbf{Popis metody:} 
+            Zjišuje, zda se mùeme zavolat akci "vpøed".
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.MuzemeTahnoutZpet\newline
+  \textbf{Popis metody:} 
+            Zjišuje, zda se mùeme zavolat akci "zpìt".
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.VitezNeboLimit\newline
+  \textbf{Popis metody:} 
+            Zjišuje, zda jsme dosáhli maximálního limitu ve høe
+            nebo zda ji nìkdo z hráèù vyhrál.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.ZjistiViteze\newline
+  \textbf{Popis metody:} 
+            Uloí do slotu "Vitez" kdo vyhrál. V pøípadì, e nevyhrál nikdo,
+            uloí do slotu MoznostiVyher.nikdo.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Manazer.UkonciTahPocitacu\newline
+  \textbf{Popis metody:} 
+            Pokud je spuštìna hra dvou poèítaèù, ukonèíme ji.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Manazer.Deska\newline
+  \textbf{Popis vlastnosti:} 
+            Deska, na které se hra hraje
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Manazer.NastaveniObranci\newline
+  \textbf{Popis vlastnosti:} 
+            Nastavili jsme ji obránce?
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Manazer.PocetTahu\newline
+  \textbf{Popis vlastnosti:} 
+            Poèet pùltahù hry
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Manazer.KonecHry\newline
+  \textbf{Popis vlastnosti:} 
+            Byla ji hra ukonèena?
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Manazer.Vitez\newline
+  \textbf{Popis vlastnosti:} 
+            Kdo vyhrál?
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Manazer.TahyZpet\newline
+  \textbf{Popis vlastnosti:} 
+            zásobník uchovávající si zpìtné tahy
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Manazer.TahyVpred\newline
+  \textbf{Popis vlastnosti:} 
+            zásobník uchovávající si tahy vpøed
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Manazer.ObtiznostHry\newline
+  \textbf{Popis vlastnosti:} 
+            Obtínost poèítaèe
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Manazer.JePocitacNaTahu\newline
+  \textbf{Popis vlastnosti:} 
+            Je na tahu poèítaèovı hráè s umìlou inteligencí?
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Manazer.LimitTahu\newline
+  \textbf{Popis vlastnosti:} 
+            Limit pro konec hry pro pøípad opakování tahù
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Manazer.Obrance\newline
+  \textbf{Popis vlastnosti:} 
+            Vrátí referenci na obránce
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Manazer.Utocnik\newline
+  \textbf{Popis vlastnosti:} 
+            Vrátí odkaz na útoèníka
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Manazer.DvaPocitace\newline
+  \textbf{Popis vlastnosti:} 
+            Hrají pouze poèítaèe?
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Manazer.hracNaTahu\newline
+  \textbf{Popis vlastnosti:} 
+            Kterı hráè je zrovna na tahu?
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.Manazer.StavPole\newline
+  \textbf{Popis typu:} 
+            Vıèet reprezentující moné stavy na desce
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.StavPole.mimo\newline
+  \textbf{Popis:} 
+            Pole je mimo hrací desku (rohy hrací desky)
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.StavPole.volne\newline
+  \textbf{Popis:} 
+            Pole je na hrací desce a je volné
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.StavPole.utok\newline
+  \textbf{Popis:} 
+            Pole je na hrací desce a je na nìm kámen útoèníka
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.StavPole.obrana\newline
+  \textbf{Popis:} 
+            Pole je na hrací desce a je na nìm kámen obránce
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.Manazer.Obtiznost\newline
+  \textbf{Popis typu:} 
+            Obtínost poèítaèe
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.Obtiznost.snadna\newline
+  \textbf{Popis:} 
+            Snadná obtínost.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.Obtiznost.normalni\newline
+  \textbf{Popis:} 
+            Normální obtínost.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.Obtiznost.tezka\newline
+  \textbf{Popis:} 
+            Tìká obtínost.
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.Manazer.MoznostiVyher\newline
+  \textbf{Popis typu:} 
+            Stav hry aneb kdo vyhrál
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.MoznostiVyher.nikdo\newline
+  \textbf{Popis:} 
+            Nikdo nevyhrál.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.MoznostiVyher.utok\newline
+  \textbf{Popis:} 
+            Vyhrál útok.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.MoznostiVyher.obrana\newline
+  \textbf{Popis:} 
+            Vyhrál obránce.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Manazer.MoznostiVyher.remiza\newline
+  \textbf{Popis:} 
+            Vyhrála remíza.
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.Tah\newline
+  \textbf{Popis typu:} 
+            Reprezentuje jakıkoliv tah ve høe.
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.Tah.seznamPozic\newline
+  \textbf{Popis:} 
+            Obsahuje seznam pozic odkud kam se táhne.
+            Pokud je seznam jednoprvkovı, nastavujeme obránce.
+            Pokud je seznam dvouprvkovı, provádíme normální tah.
+            Pokud je seznam dvouprvkovı, ale pozice jsou od sebe vzdáleny ob jedno, provádíme skok.
+            Pokud je seznam víceprvkovı, provádíme vícenásobnı skok.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Tah.\#ctor\newline
+  \textbf{Popis metody:} 
+            Inicializuje novı tah, ale seznam pozic zùstane prázdnı. 
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Tah.\#ctor(ObranaPevnosti.Pozice[])\newline
+  \textbf{Popis metody:} 
+            Inicializuje tah vèetnì seznamu pozic, kde bude tah proveden.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Tah.\#ctor(System.Collections.Generic.List{ObranaPevnosti.Pozice})\newline
+  \textbf{Popis metody:} 
+            Inicializuje tah vèetnì seznamu pozic, kde bude tah proveden.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Tah.ToString\newline
+  \textbf{Popis metody:} 
+            Vrací textovou reprezentaci tahu ve formátu [a, 1] -> [b, 2]
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Tah.PocetPozic\newline
+  \textbf{Popis metody:} 
+            Zjišuje, pøes kolik pozic bude proveden tah.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Tah.stejne(ObranaPevnosti.Tah)\newline
+  \textbf{Popis metody:} 
+            Zjišuje, zda jsou dané dva tahy stejné.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Tah.SkakaloSe\newline
+  \textbf{Popis metody:} 
+            Pomocí vzdálenosti a poètu pozic v seznamu zjišuje, zda se v tomto tahu skákalo.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Tah.Clone\newline
+  \textbf{Popis metody:} 
+            Klonuje objekt
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.HraciDeska\newline
+  \textbf{Popis typu:} 
+            Souøadnice hrací desky
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.\#ctor\newline
+  \textbf{Popis metody:} 
+            Inicializuje hrací desku a restartuje ji do vıchozího nastavení.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.Restart\newline
+  \textbf{Popis metody:} 
+            Nastaví hrací desku do poèáteèního stavu.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.PocetUtocniku\newline
+  \textbf{Popis metody:} 
+            Projde celou hrací desku a vrátí poèet útoèníkù.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.ObsazenaPevnost\newline
+  \textbf{Popis metody:} 
+            Zjišuje, zda útoèníci obsadili pevnost.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.NastavObrance(ObranaPevnosti.Pozice)\newline
+  \textbf{Popis metody:} 
+            Nastaví jednoho obránce na hrací desku. Pokud u jsou všichni obránci
+            nastaveni, vyhodí metoda vıjimku.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.Tahni(ObranaPevnosti.Tah)\newline
+  \textbf{Popis metody:} 
+            Provede tah na desce.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.VratZpatkyTah(ObranaPevnosti.Tah)\newline
+  \textbf{Popis metody:} 
+            Provede tah naopak, tj. vrátí uvedenı tah zpátky
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.Tahni(ObranaPevnosti.Pozice,ObranaPevnosti.Pozice)\newline
+  \textbf{Popis metody:} 
+            Provede tah na desce.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.Tahni(System.Int32,System.Int32,System.Int32,System.Int32)\newline
+  \textbf{Popis metody:} 
+            Provede tah na desce se základní kontrolou (je souøadnice opravdu na desce? je políèko volné?)
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.NastavKamen(System.Int32,System.Int32,ObranaPevnosti.Manazer.StavPole)\newline
+  \textbf{Popis metody:} 
+            Bez kontroly nastaví kámen na desku.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.NastavKamen(ObranaPevnosti.Pozice,ObranaPevnosti.Manazer.StavPole)\newline
+  \textbf{Popis metody:} 
+            Bez kontroly nastaví kámen na desku.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.Hrac(ObranaPevnosti.Pozice)\newline
+  \textbf{Popis metody:} 
+            Jakı hráè stojí na pozici?
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.Hrac(System.Int32,System.Int32)\newline
+  \textbf{Popis metody:} 
+            Jakı hráè stojí na pozici?
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.OdeberKamen(System.Int32,System.Int32)\newline
+  \textbf{Popis metody:} 
+            Odebere kámen z desky.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.OdeberKamen(ObranaPevnosti.Pozice)\newline
+  \textbf{Popis metody:} 
+            Odebere kámen z desky, namísto nìj vloí Hraci.volne.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.Rohova(System.Int32,System.Int32)\newline
+  \textbf{Popis metody:} 
+            Je daná pozice rohová (tj. mimo hrací desku?)
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.Pevnost(System.Int32,System.Int32)\newline
+  \textbf{Popis metody:} 
+            Nacházíme se v pevnosti?
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.Pevnost(ObranaPevnosti.Pozice)\newline
+  \textbf{Popis metody:} 
+            Nacház se daná pozice v pevnosti?
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.NaDesce(System.Int32,System.Int32)\newline
+  \textbf{Popis metody:} 
+            Nacházíme se vùbec na desce?
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.Volne(System.Int32,System.Int32)\newline
+  \textbf{Popis metody:} 
+            Je dané políèko volné?
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.MuzemeTahnout(System.Int32,System.Int32)\newline
+  \textbf{Popis metody:} 
+            Mùeme na dané políèko táhnout?
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.VratPoziceObrancu\newline
+  \textbf{Popis metody:} 
+            Vyhledá na hrací desce obránce.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.ToString\newline
+  \textbf{Popis metody:} 
+            Textová reprezentace hrací desky. Hodí se pouze pro úèely porovnávání
+            zda je hrací deska stejná, take vracíme hashcode.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.VratPoziceHrace(ObranaPevnosti.Manazer.StavPole)\newline
+  \textbf{Popis metody:} 
+            Vrací všechny pozice daného hráèe na hrací desce.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.Copy\newline
+  \textbf{Popis metody:} 
+            Zkopíruje hrací desku.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.OdstranPreskoceneKameny(ObranaPevnosti.Tah)\newline
+  \textbf{Popis metody:} 
+            Odstraní pøeskoèené kameny.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.Equals(System.Object)\newline
+  \textbf{Popis metody:} 
+            Jsou objekty stejné?
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.GetHashCode\newline
+  \textbf{Popis metody:} 
+            Vrací HashCode.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.HraciDeska.PridejPreskoceneKameny(ObranaPevnosti.Tah)\newline
+  \textbf{Popis metody:} 
+            Vrátí zpìt kameny, které byly pùvodnì pøeskoèené
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.HraciDeska.deska\newline
+  \textbf{Popis vlastnosti:} 
+            Pole reprezentující hrací desku.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.HraciDeska.rozmer\newline
+  \textbf{Popis vlastnosti:} 
+            Rozmìr hrací desky.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.HraciDeska.aktualniTah\newline
+  \textbf{Popis vlastnosti:} 
+            Zde si hrací deska uchovává naposledy odehranı tah.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.HraciDeska.PocetObrancu\newline
+  \textbf{Popis vlastnosti:} 
+            Poèet nastavenıch obráncù.
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.HraciDeska.Souradnice\newline
+  \textbf{Popis typu:} 
+            Souøadnice  hrací desky
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HraciDeska.Souradnice.a\newline
+  \textbf{Popis:} 
+            
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HraciDeska.Souradnice.b\newline
+  \textbf{Popis:} 
+            
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HraciDeska.Souradnice.c\newline
+  \textbf{Popis:} 
+            
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HraciDeska.Souradnice.d\newline
+  \textbf{Popis:} 
+            
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HraciDeska.Souradnice.e\newline
+  \textbf{Popis:} 
+            
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HraciDeska.Souradnice.f\newline
+  \textbf{Popis:} 
+            
+            }
+  
+  \item{\textbf{Formuláøovı prvek:} F:ObranaPevnosti.HraciDeska.Souradnice.g\newline
+  \textbf{Popis:} 
+            
+            }
+  
+  \item{\textbf{Typ:} T:ObranaPevnosti.Properties.Resources\newline
+  \textbf{Popis typu:} 
+              A strongly-typed resource class, for looking up localized strings, etc.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Properties.Resources.ResourceManager\newline
+  \textbf{Popis vlastnosti:} 
+              Returns the cached ResourceManager instance used by this class.
+            }
+  
+  \item{\textbf{Název vlastnosti:} P:ObranaPevnosti.Properties.Resources.Culture\newline
+  \textbf{Popis vlastnosti:} 
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Partie.UlozHru(System.String,ObranaPevnosti.Manazer)\newline
+  \textbf{Popis metody:} 
+            Uloí hru do binárního souboru.
+            }
+  
+  \item{\textbf{Název metody:} M:ObranaPevnosti.Partie.NahrajHru(System.String)\newline
+  \textbf{Popis metody:} 
+            Naète z binárního souboru hru.
+            }
+  
+\end{itemize}
+\end{document}
+  

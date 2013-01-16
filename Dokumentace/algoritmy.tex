@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage[czech]{babel}
+\usepackage[cp1250]{inputenc} 
+\begin{document}
+{\LARGE Algoritmy použité ve høe \em{Obrana pevnosti}}
+
+\section{Strategie poèítaèového hráèe}
+\subsection{Strategie obránce}
+Obránce musí jednak chránit svou pevnost, ale také musí poskákat co nejvíce útoèníkù, což je nejjednodušší cesta k jeho výhøe. Vzhledem k tomu, že obránci jsou ve høe právì dva, je rozdìlení úloh takové, že jeden obránce se snaží zùstávat pøímo v pevnosti, aby ji mohl efektivnì bránit, a druhý obránce se snaží aktivnì skákat útoèníkovy kameny mimo pevnost. Strategie obránce spoèívá pøedevším v rozmístìní dvou svých kamenù -- jeden v pevnosti a druhý mimo pevnost. Obránce si samozøejmì vybírá takové tahy, aby poskákal útoèníkovi co nejvíce kamenù. Snaží se také zabránit útoèníkovi, aby se dostal na okraj pevnosti, kde mùže útoèníka hùøe pøeskoèit, a hlavnì do rohu pevnosti, kde už ho obránce nemùže pøeskoèit vùbec. Když už se má útoèník dostat do pevnosti, snaží se obránce, aby to bylo støedem. Obránce se dále snaží vracet se do pevnosti, pokud mu útoèník vystrnadí oba kameny ven z pevnosti. Obránce se také snaží zablokovat útoèníka tak, aby žádný útoèníkùv kámen už nemohl táhnout, a tím pro sebe získat vítìzství.
+
+\subsection{Strategie útoèníka}
+Úloha útoèníka je obsadit pevnost, èehož nejlépe dosáhne tak, pokud se bude pomalu posouvat dopøedu a bude si nejvíce chránit své kameny, protože èím více kamenù bude mít, tím menší je šance, že ho obránce mùže nìkde skoèit. Útoèník si tak nejvíce hlídá to, aby mu obránce nebral zbyteènì kameny. Útoèník se snaží obsadit pøedevším rohy a kraje pevnosti, kde je nejmenší (èi žádná) šance, že ho obránce pøeskoèí a útoèníktak pøijde o své získané pozice. Útoèník se zároveò snaží vystrnadit oba obránce pryè z pevnosti, aby ji mohl jednodušeji obsadit. Nejvíce se snaží dostat obránce do nejspodnìjších øad hrací desky, odkudto má obránce nejdále zpìt do pevnosti. Útoèník se zèásti snaží zablokovat obránce, ale vzhledem k pružnosti obránce to není pøíliš efektivní taktika, takže primární cíl zùstává obsadit pevnost. V pøípadì ohrožení pøeskoèení se útoèník autmaticky kryje dalšími kameny, pokud nìjaké má -- zkrátka se snaží dosáhnout toho, aby pøišel o co nejménì kamenù.  
+
+\subsection{Obecné poznámky}
+\begin{itemize}
+\item V obou algoritmech je použita sùl, tj. ke každému výslednému ohodnocení je ještì pøièteno náhodné èíslo, které efektivnì zabraòuje tomu, aby poèítaè hrál po každé stejnì.
+\item Algoritmus ohodnocení si hlídá, zda se neopakují stále tytéž pozice na hrací desce, zda nedochází k opakování tahù. Pokud se bìhem 12 kol opakuje urèitá pozice na hrací desce více než dvakrát, dojde ke snížení ohodnocení daného tahu. Tím lze snížit riziko vzniku opakovaných tahù, ale ne zcela vylouèit -- nemá-li poèítaè jiný tah, èi je ten jiný tah pro nìj zásadnì horší, stejnì pojede tahem, kterým už jel vícekrát.
+\item Finální øešení, které zabraòuje opakování tahù, je omezený poèet tahù. Limit je stanoven na 250 tahù (pùltahù). Pokud se pøekroèí tento poèet, je hra ukonèena s výsledkem {\em remíza}. V praxi bylo ovìøeno, že každá smysluplná hra stejnì konèí v daleko menším poètu tahù, takže pøi poètu tahù nad dvì stì už je témìø jisté, že dochází k opakování tahù a poèítaè nemá jak táhnout jinak.   
+\end{itemize} 
+
+\section{Použité algoritmy}
+\subsection{Generování všech platných tahù}
+Tøída {\em Rozhodci} obsahuje metodu pro vygenereování všech platných tahù z dané pozice pro daného hráèe. Jako první si necháme vygenerovat všechny jednoduché tahy, ve dvou cyklech projedeme všechny pozice na hrací desce (dvoudimenzionální pole) a zjistíme, jestli se na dané políèko mùžeme pøesunout. Na to máme metody, které rozhodnou, zda posun z jednoho políèka do druhého je validní. Po vygenerování jednoduchých tahù zkontrolujeme, zda je na tahu útoèník. Pokud ano, generování konèí, útoèník mùže provést pouze jendoduchý tah. Pokud je na tahu obránce, zkontrolujeme, zda se ve vygenerovaných tazích nevyskytuje nìjaký skok. Pokud ano, pøistoupíme ke druhé fázi generování -- musíme najít všechny skoky. Tahy, ve kterých obránce neskáèe, zahodíme. Po vygenerování všech skokù (viz další kapitola) vrátíme tento nový seznam paltných tahù. Generování konèí.
+
+\subsection{Generování všech vícenásobných skokù}
+Pøedpoklad je, že už máme seznam nìjakých skokù (ty vygenerujeme v první fázi generování tahú, viz pøedchozí kapitola). Poté postupujeme tak, že si vytvoøíme kopii souèasné hrací desky (vyhneme se tak nepøíjemným kolizím) a na tuto kopii provedeme tah (skok) a z této pozice dále generujeme skoky stejným zpùsobem. Takto rekurzivnì projdeme všechny varianty skokù a bìhem toho si program pozice skokù uchovává ve stromové datové struktuøe (n-ární strom). Po vygenerování stromu už staèí tento strom zlinearizovat do nìjakého seznamu (listu).
+
+\subsection{Minimax}
+Pro generování budoucích tahù je použit klasický algoritmus minimaxu. Jednotlivé pozice jsou ohodnoceny pomocií ohodnocovací funkce a následnì je vybrán ten pro danou chvíli nejvýhodnìjší tah. Alfa-beta oøezávání není implementované, minimax funguje i bez nìj dostateènì rychle.
+
+\subsection{Obtížnost hry}
+Obtížnost poèítaèového hráèe je realizována rozdílnou hloubkou pøi generování možných tahù v Minimaxu. Nejvìtší obtížnost má zároveò nejvìtší hloubku pøi generování tahù. Ve tøídì \texttt{Manazer} je pak v metodì \texttt{Tahni} volána metoda \texttt{Minimax.NejlepsiTah}, které je jako jeden z argumentù pøedána hloubka generování. Lehké obtížnosti odpovídá hloubka dva, normální tøi a tìžké ètyøi.   
+
+\end{document}
